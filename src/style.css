@@ -1,0 +1,122 @@
+@import url('https://fonts.upset.dev/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --base-100: var(--color-white);
+  --base-200: var(--color-neutral-200);
+  --base-300: var(--color-neutral-300);
+  --base-1000: var(--color-neutral-950);
+
+  --bg: var(--color-neutral-50);
+  --bg-depth: var(--color-white);
+
+  --border: var(--color-neutral-200);
+  --marker: var(--color-neutral-300);
+
+  --text-strong: var(--color-neutral-900);
+  --text-soft: var(--color-neutral-600);
+
+  --base-selection: var(--color-neutral-300);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --base-100: var(--color-neutral-900);
+    --base-200: var(--color-neutral-800);
+    --base-300: var(--color-neutral-700);
+    --base-1000: var(--color-white);
+
+    --bg: var(--color-zinc-950);
+    --bg-depth: var(--color-neutral-900);
+
+    --border: var(--color-neutral-800);
+    --marker: var(--color-neutral-700);
+
+    --text-strong: var(--color-neutral-100);
+    --text-soft: var(--color-neutral-400);
+
+    --base-selection: var(--color-neutral-600);
+  }
+
+  .dark\:opacity-10 {
+    opacity: 0.1 !important;
+  }
+}
+
+@theme {
+  --font-sans: var(--font-inter);
+
+  --color-base-100: var(--base-100);
+  --color-base-200: var(--base-200);
+  --color-base-300: var(--base-300);
+  --color-base-1000: var(--base-1000);
+
+  --color-base-bg: var(--bg);
+  --color-base-bg-depth: var(--bg-depth);
+
+  --color-base-border: var(--border);
+
+  --text-color-base-strong: var(--text-strong);
+  --text-color-base-soft: var(--text-soft);
+
+  --color-base-selection: var(--base-selection);
+
+  --ease-bounce: cubic-bezier(0.2, -0.25, 0, 1.6);
+  --ease-bounce-lite: cubic-bezier(0, 0, 0, 1.1);
+}
+
+/* Base styles */
+
+html {
+  font-size: 18px;
+}
+
+/* Accessibility */
+
+.add-focus {
+  @apply focus-visible:ring-base-1000/75 outline-none focus:opacity-100 focus-visible:z-50! focus-visible:ring-2 *:in-focus:opacity-100;
+}
+
+.add-focus-text {
+  @apply ring-offset-base-bg focus-visible:ring-base-1000/75 rounded-xs focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+}
+
+/* Formatting */
+
+.format-text {
+  h2 {
+    @apply text-base-strong font-medium text-balance;
+  }
+
+  p {
+    @apply text-base-soft mt-2 mb-10 md:mb-16 leading-relaxed text-pretty last-of-type:mb-0;
+  }
+}
+
+/* Animations */ 
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.appear {
+  animation: appear 0.6s cubic-bezier(0.3, 0, 0, 1) forwards;
+}
+
+@media (prefers-reduced-motion) {
+  .appear {
+    animation: none;
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
