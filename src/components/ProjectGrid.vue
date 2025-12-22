@@ -14,6 +14,11 @@ import ProjectCard from '@/components/ProjectCard.vue'
 
 const projects = [
   {
+    title: 'Lyra',
+    description: 'Lyrics for your current Spotify track.',
+    url: 'https://lyra.emca.app/',
+  },
+  {
     title: 'JSON Viewer',
     description:
       'A minimal tool that formats JSON into a readable tree structure.',
