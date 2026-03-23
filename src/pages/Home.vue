@@ -4,15 +4,18 @@
       <h2>About</h2>
       <p>
         I'm a software developer from Sweden 🇸🇪, currently working at
-        <TextLink href="https://www.boardeaser.com/" title="Boardeaser" />,
-        where we simplify the everyday life for boards and executives.
-        Previously, I worked on health care systems at
-        <TextLink href="https://www.tietoevry.com/en/" title="Tietoevry" />.
+        <TextLink href="https://www.fortnox.se/" title="Fortnox" />, where we
+        help businesses succeed by providing them with the best possible tools.
+        Previously, I worked on tools for boards and executives at
+        <TextLink href="https://www.boardeaser.com/" title="Boardeaser" />
+        and healthcare systems at
+        <TextLink href="https://www.tieto.com/en/" title="Tieto" />.
       </p>
 
       <h2>Side Projects</h2>
       <p class="mb-4!">
-        A collection of some of my side projects, more can be found on my
+        A collection of some of my open-source side projects, more can be found
+        on my
         <TextLink
           href="https://github.com/carlssonemil"
           title="GitHub"
