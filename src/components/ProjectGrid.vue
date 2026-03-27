@@ -14,6 +14,11 @@ import ProjectCard from '@/components/ProjectCard.vue'
 
 const projects = [
   {
+    title: 'Benchwarm',
+    description: 'Weighted spin-the-wheel lineup picker for game teams.',
+    url: 'https://benchwarm.emca.app/',
+  },
+  {
     title: 'Lyra',
     description: 'Lyrics for your current Spotify track.',
     url: 'https://lyra.emca.app/',
